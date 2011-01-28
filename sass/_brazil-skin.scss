@@ -1,0 +1,233 @@
+
+
+// This variable controls the total width of the container div
+// You can use px for a Fixed layout or % for a Liquid layout
+$brazil-width: 960px;
+
+// These variables control the size of the sidebars
+$brazil-first-sidebar-width: 200px;
+$brazil-second-sidebar-width: 200px;
+
+// This variable positions the content relative to the sidebars
+// Possible values are first, last, middle
+$brazil-content-position: "middle";
+
+// These variables control the #navigation div
+$brazil-navigation-width: 100%;
+$brazil-navigation-height: 2.3em;
+
+// These variables control the typefaces as defined in html-reset.css
+$brazil-proportional-typeface: 'Verdana, Tahoma, "DejaVu Sans", sans-serif';
+$brazil-monospaced-typeface: '"Courier New", "DejaVu Sans Mono", monospace';
+
+// These variables control the font sizes as defined in html-reset.css
+$brazil-base-font-size: 14px;
+
+//HTML Elements
+.-brazil-h2 { } //Not meant for Block titles
+
+.-brazil-h3 { }
+
+.-brazil-h4 { }
+
+.-brazil-p { }
+
+.-brazil-li { }
+
+.-brazil-ul {
+  li { @extend .-brazil-li; } }
+
+.-brazil-ol {
+  li { @extend .-brazil-li; } }
+
+.-brazil-blockquote { }
+
+.-brazil-cite { }
+
+.-brazil-a {
+  &:link { }
+  &:visited { }
+  &:hover { }
+  &:focus { }
+  &:active { } }
+
+.-brazil-pre { }
+
+.-brazil-code { }
+
+.-brazil-table {
+  caption { }
+  tr {
+    &.odd { }
+    &.even { }
+    th { }
+    td { }
+    thead & { }
+    tfoot & { }
+    tbody & { } } }
+
+// Content Classes
+.-brazil-node-content {
+  h2 { @extend .-brazil-h2; }
+  h3 { @extend .-brazil-h3; }
+  h4 { @extend .-brazil-h4; }
+  p { @extend .-brazil-p; }
+  li { @extend .-brazil-li; }
+  ul { @extend .-brazil-ul; }
+  ol { @extend .-brazil-ol; }
+  pre { @extend .-brazil-pre; }
+  code { @extend .-brazil-code; }
+  blockquote { @extend .-brazil-blockquote; }
+  cite { @extend .-brazil-cite; }
+  a { @extend .-brazil-a; }
+  table { @extend .-brazil-table; } }
+
+.-brazil-block-content {
+  h3 { @extend .-brazil-h3; }
+  h4 { @extend .-brazil-h4; }
+  p { @extend .-brazil-p; }
+  ul { @extend .-brazil-ul; }
+  ol { @extend .-brazil-ol; }
+  li { @extend .-brazil-li; }
+  a { @extend .-brazil-a; } }
+
+// Page Components
+.-brazil-body { }
+
+.-brazil-skip-link { }
+
+.-brazil-page { }
+
+.-brazil-header { }
+
+.-brazil-logo { }
+
+.-brazil-name-and-slogan { } //usually the .name-and-slogan div
+
+.-brazil-site-name {
+  a { } }
+
+.-brazil-site-slogan { }
+
+.-brazil-mission { }
+
+.-brazil-main { }
+
+.-brazil-sidebar { } //make a copy to have different sidebars
+
+.-brazil-navigation { }
+
+.-brazil-content { }
+
+.-brazil-title { } //this will be the h1, except for the home page
+
+.-brazil-content-area { }
+
+.-brazil-breadcrumb {
+  a { } }
+
+.-brazil-messages {
+  ul {
+    li { } } }
+
+.-brazil-messages-error { @extend .-brazil-messages; }
+
+.-brazil-messages-warning { @extend .-brazil-messages; }
+
+.-brazil-messages-status { @extend .-brazil-messages; }
+
+.-brazil-messages-help { @extend .-brazil-messages; }
+
+.-brazil-tabs { } // usually the .tabs div
+
+.-brazil-primary-tabs {
+  li {
+    a { }
+    &.active {
+      a { } } } }
+
+.-brazil-secondary-tabs {
+  li {
+    a { }
+    &.active {
+      a { } } } }
+
+// Make copies of these components for a diversity of menu styles
+.-brazil-menu {
+  > li { // use '>' to target only child items
+    &.first { }
+    &.last { }
+    &.expanded { } } }
+
+.-brazil-submenu { // think expanded menus, not secondary menus
+    > li { // use '>' to target only child items
+    &.first { }
+    &.last { }
+    &.expanded { } } }
+
+.-brazil-footer { }
+
+.-brazil-pager {
+  .pager-item { }
+  .pager-current { }
+  .pager-previous { }
+  .pager-next { }
+  .pager-first { }
+  .pager-last { }
+  a { } }
+
+.-brazil-feed-icons {
+  .feed-icon { } }
+
+.-brazil-footer-message { }
+
+// Block Components
+// Make copies of these components for a diversity of block styles
+.-brazil-block { }
+
+.-brazil-block-title { }
+
+.-brazil-block-content { @extend .-brazil-block-content; }
+
+// Node Components
+// Make copies of these components for a diversity of node styles
+.-brazil-node { }
+
+.-brazil-node-picture { }
+
+.-brazil-node-title { } //for node listings, see page-title
+
+.-brazil-node-meta {
+
+.-brazil-node-submitted { }
+
+.-brazil-node-terms { } }
+
+.-brazil-node-content { @extend .-brazil-node-content; }
+
+.-brazil-node-links {
+  li {
+    &.first { }
+    &.last { } } }
+
+.-brazil-node-sticky { }
+
+.-brazil-node-unpublished {
+    .unpublished { } }
+
+.-brazil-node-by-viewer { }
+
+.-brazil-node-preview { }
+
+// Profile Components
+.-brazil-profile { }
+
+.-brazil-profile-picture { }
+
+.-brazil-profile-category-header { }
+
+.-brazil-profile-category-wrapper { }
+
+.-brazil-profile-field-label { }
+
+.-brazil-profile-field-value { }

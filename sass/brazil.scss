@@ -1,0 +1,170 @@
+
+
+@import "drupal/zen";
+@import "brazil-skin";
+
+// Map the zen variables to the skin variables
+$zen-width: $brazil-width;
+$zen-first-sidebar-width: $brazil-first-sidebar-width;
+$zen-second-sidebar-width: $brazil-second-sidebar-width;
+$zen-content-position: $brazil-content-position;
+$zen-navigation-width: $brazil-navigation-width;
+$zen-navigation-height: $brazil-navigation-height;
+$zen-proportional-typeface: $brazil-proportional-typeface;
+$zen-monospaced-typeface: $brazil-monospaced-typeface;
+$zen-base-font-size: $brazil-base-font-size;
+
+// Use this mixin to generate the Zen layout
+@include zen-layout;
+
+// Use this mixin to properly position the #navigation div
+@include zen-navigation;
+
+//Use this mixin to set the typefaces
+@include zen-typefaces;
+
+//Use this mixin to set the font sizes
+@include zen-typography;
+
+body { @extend .-brazil-body; }
+
+#skip-link { @extend .-brazil-skip-link; }
+
+#page-wrapper {
+
+  #page { @extend .-brazil-page; }
+
+  #main { @extend .-brazil-main; }
+
+  #header {
+    @extend .-brazil-header;
+    #logo { @extend .-brazil-logo; }
+    #name-and-slogan {
+      @extend .-brazil-name-and-slogan;
+      #site-name { @extend .-brazil-site-name; }
+      #site-slogan { @extend .-brazil-site-slogan; } }
+    //#search-box { @extend .-brazil-search-box; }
+ }
+
+  #navigation {
+    @extend .-brazil-navigation;
+    #main-menu {
+      @extend .-brazil-menu;
+      > li.expanded > ul.menu { @extend .-brazil-submenu; } } }
+
+  #footer {
+    @extend .-brazil-footer;
+    #secondary-menu { @extend .-brazil-menu; }
+    #footer-message { @extend .-brazil-footer-message; } }
+
+/* Content */
+
+  #content {
+    @extend .-brazil-content;
+    #breadcrumb { @extend .-brazil-breadcrumb; }
+    h1.title { @extend .-brazil-title; }
+    .messages {
+      &.status { @extend .-brazil-messages-status; }
+      &.warning { @extend .-brazil-messages-warning; }
+      &.error { @extend .-brazil-messages-error; }
+      &.help { @extend .-brazil-messages-help; } }
+    .tabs {
+      @extend .-brazil-tabs;
+      .primary { @extend .-brazil-primary-tabs; }
+      .secondary { @extend .-brazil-secondary-tabs; } }
+    #content-area { 
+      @extend .-brazil-content-area; 
+      .pager { @extend .-brazil-pager; } }
+      #mission { @extend .-brazil-mission; }
+    .feed-icons { }
+
+/* Nodes */
+
+    .node {
+      @extend .-brazil-node;
+      .picture { @extend .-brazil-node-picture; }
+      .title { @extend .-brazil-node-title; }
+      .meta {
+        @extend .-brazil-node-meta;
+        .submitted { @extend .-brazil-node-submitted; }
+        .terms { @extend .-brazil-node-terms; } }
+      .content { @extend .-brazil-node-content; }
+      .links { @extend .-brazil-node-links; }
+      &.node-sticky { @extend .-brazil-node-sticky; }
+      &.node-unpublished { @extend .-brazil-node-unpublished; }
+      &.node-by-viewer { @extend .-brazil-node-by-viewer; }
+      .preview & { @extend .-brazil-node-preview; } }
+
+/* Profiles */
+
+    .profile {
+      @extend .-brazil-profile;
+      .picture { @extend .-brazil-profile-picture; }
+      h3 { @extend .-brazil-profile-category-title; } /* profile category header */
+      dl { /* profile category wrapper */
+        @extend .-brazil-profile-category-wrapper;
+        dt { @extend .-brazil-profile-field-label; } /* profile category label */
+        dd { @extend .-brazil-profile-field-value; } } } } /*  profile category value */
+
+/* Regions */
+
+  .region-sidebar-first {
+    @extend .-brazil-sidebar;
+    .block {
+      @extend .-brazil-block;
+      .title { @extend .-brazil-block-title; }
+      .content { @extend .-brazil-block-content; }
+      &.odd { }
+      &.even { } } }
+
+  .region-sidebar-second {
+    @extend .-brazil-sidebar;
+    .block {
+      @extend .-brazil-block;
+      .title { @extend .-brazil-block-title; }
+      .content { @extend .-brazil-block-content; }
+      &.odd { }
+      &.even { } } }
+
+  .region-navigation {
+    .block { @extend .-brazil-block;
+      .title { @extend .-brazil-block-title; }
+      .content { @extend .-brazil-block-content; } } }
+
+  .region-highlight {
+    .block {
+      @extend .-brazil-block;
+      .title { @extend .-brazil-block-title; }
+      .content { @extend .-brazil-block-content; } } }
+
+  .region-content-top {
+    .block {
+      @extend .-brazil-block;
+      .title { @extend .-brazil-block-title; }
+      .content { @extend .-brazil-block-content; } } }
+
+  .region-content-bottom {
+    .block {
+      @extend .-brazil-block;
+      .title { @extend .-brazil-block-title; }
+      .content { @extend .-brazil-block-content; } } }
+
+  .region-header {
+    .block {
+      @extend .-brazil-block;
+      .title { @extend .-brazil-block-title; }
+      .content { @extend .-brazil-block-content; } } }
+
+  .region-footer {
+    .block {
+      @extend .-brazil-block;
+      .title { @extend .-brazil-block-title; }
+      .content { @extend .-brazil-block-content; } } }
+
+  .region-page-closure {
+    .block {
+      @extend .-brazil-block;
+      .title { @extend .-brazil-block-title; }
+      .content { @extend .-brazil-block-content; } } }
+
+}
